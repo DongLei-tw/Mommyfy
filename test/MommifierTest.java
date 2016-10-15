@@ -28,42 +28,49 @@ public class MommifierTest {
     }
 
     @Test
-    public void shouldNotMommifyAStringWithoutVovel() throws Exception {
+    public void shouldNotMommifyAStringWithoutVowel() throws Exception {
         assertEquals("rty", mommyfier.mommify("rty"));
     }
 
     @Test
-    public void shouldMommifyAStringWithASingleVovele() throws Exception {
+    public void shouldMommifyAStringWithASingleVowelE() throws Exception {
         assertEquals("mommy", mommyfier.mommify("e"));
     }
 
     @Test
-    public void shouldMommifyAStringWithASingleVoveli() throws Exception {
+    public void shouldMommifyAStringWithASingleVowelI() throws Exception {
         assertEquals("mommy", mommyfier.mommify("i"));
     }
 
     @Test
-    public void shouldMommifyAStringWithASingleVovelo() throws Exception {
+    public void shouldMommifyAStringWithASingleVowelO() throws Exception {
         assertEquals("mommy", mommyfier.mommify("o"));
     }
 
     @Test
-    public void shouldMommifyAStringWithASingleVovelu() throws Exception {
+    public void shouldMommifyAStringWithASingleVowelU() throws Exception {
         assertEquals("mommy", mommyfier.mommify("u"));
     }
 
     @Test
-    public void shouldNotMommifyAStringWithLessThanThirtyPercentOfVovels() throws Exception {
+    public void shouldNotMommifyAStringWithLessThanThirtyPercentOfVowels() throws Exception {
         assertEquals("hard", mommyfier.mommify("hard"));
     }
 
     @Test
-    public void shouldMommifyAStringWithMoreThanThirtyPercentOfVovels() throws Exception {
+    public void shouldMommifyAStringWithMoreThanThirtyPercentOfVowels() throws Exception {
         assertEquals("hmommys", mommyfier.mommify("his"));
     }
 
     @Test
-    public void shouldMommifyOnlyOnceAStringWithContineousVovel() throws Exception {
+    public void shouldMommifyOnlyOnceAStringWithContinuousVowel() throws Exception {
         assertEquals("hmommyr", mommyfier.mommify("hear"));
+    }
+
+    @Test
+    public void shouldMommifyTwiceAStringWithTwoContinuousVowel() throws Exception {
+
+        assertEquals("hmommyddmommyr", mommyfier.mommify("headdear"));
+
     }
 }
